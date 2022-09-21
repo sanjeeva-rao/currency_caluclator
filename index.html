@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="total">
+       <div ng-app="myApp" class="myapp">
+            <h1>currency Converter</h1>
+            <div ng-controller="myController">
+                <input type="number" ng-model="ipcurrency" placeholder="Enter amount">
+                <br><br>
+
+                <select ng-model="currency1" value="" >
+                    <option value="" disabled>from</option>
+                    <option ng-repeat="x in Currency" >{{x.currencyName}}</option>
+
+                </select>
+                <br><br>
+                <select ng-model="currency2" >
+                    <option value="" disabled>to</option>
+                    <option ng-repeat="x in Currency">{{x.currencyName}}</option>
+                    
+
+                </select>
+                <br><br>
+                <button ng-click="convert()">caluclate</button> 
+                <p class="result">{{output | currency : resultsymbol[0].symbol : 2 }}</p>
+
+            </div>
+
+       </div>
+
+
+
+    </div>
+    <script src="myapp.js"></script>
+    <script src="mycontroller.js"></script>
+</body>
+</html>

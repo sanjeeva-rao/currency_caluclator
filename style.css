@@ -1,0 +1,19 @@
+#total{
+    border-style: solid;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    border-radius: 2%;
+    background-color: #34b7eb;
+}
+.result{
+    border-style: solid;
+    height: 1cm;
+    width: 5cm;
+    text-align: center;
+}
+
+.myapp{
+    position: relative;
+    left: 2cm;
+}
